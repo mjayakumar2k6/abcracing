@@ -82,9 +82,7 @@ const Hero = (props) => {
     <Wrapper opaque reverse {...props}>
       <InnerWrapper>
         <Section>
-          <img src={require("../../atoms/Icon/icons/banner.jpeg")} >
-
-          </img>
+   
           <img 
           data-src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021ItalianGPManuals/Sunday/USA2021_F1_Winners_Losers.jpg.transform/9col/image.jpg" 
           alt="USA2021_F1_Winners_Losers.jpg" 
@@ -93,11 +91,8 @@ const Hero = (props) => {
           data-was-processed="true"/>          
           
           <ButtonGroup>
-            <Tooltip reverse data-title="Just a fancy tooltip 😄">
-              <IconButton icon="github" href="https://github.com/diegohaz/arc">GitHub</IconButton>
-            </Tooltip>
-            <Tooltip reverse data-title="Another tooltip aligned differently" align="end" position="bottom">
-              <IconButton icon="docs" href="https://github.com/diegohaz/arc/wiki">Docs</IconButton>
+            <Tooltip reverse data-title="Get the latest news 😄">
+              <IconButton icon="github" href="/latest">Read More</IconButton>
             </Tooltip>
           </ButtonGroup>
         </Section>
@@ -106,17 +101,13 @@ const Hero = (props) => {
             6 Winners and 5 Losers from the US Grand Prix – Who had the crowd on their feet in Austin?
           </Text>
           <Instructions>
-            <Heading level={2} reverse>Install</Heading>
-            <PreformattedText block reverse wrapped>
-              git clone -b master https://github.com/diegohaz/arc my-app
-            </PreformattedText>
             <IconLink
               icon="docs"
               right
               reverse
-              href="https://github.com/diegohaz/arc/wiki/Setup"
+              href="/latest"
             >
-              Learn more
+              Read more
             </IconLink>
           </Instructions>
         </Section>
