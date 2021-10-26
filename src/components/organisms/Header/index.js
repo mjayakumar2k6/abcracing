@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { size } from 'styled-theme'
 
-import { IconLink, PrimaryNavigation, Block } from '../../index'
+import i18n from '../../i18n';
+
+import { IconLink, PrimaryNavigation, Block, Lang } from '../../index'
 
 const Wrapper = styled(Block)`
   display: flex;
@@ -23,6 +25,10 @@ const InnerWrapper = styled.div`
   }
 `
 
+const changeLanguage = (lng) => {
+  i18n.changeLanguage(lng);
+}
+
 const Header = (props) => {
   return (
     <Wrapper opaque reverse {...props}>
@@ -30,6 +36,7 @@ const Header = (props) => {
         <IconLink to="/" icon="abc" height={100} />
         <PrimaryNavigation reverse />
       </InnerWrapper>
+      <Lang/>
     </Wrapper>
   )
 }
