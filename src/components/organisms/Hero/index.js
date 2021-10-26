@@ -6,10 +6,8 @@ import {
   Block,
   Paragraph,
   IconLink,
-  IconButton,
+  Button,
   ResponsiveImage,
-  PreformattedText,
-  Heading,
   Tooltip,
 } from '../../index'
 
@@ -83,16 +81,15 @@ const Hero = (props) => {
       <InnerWrapper>
         <Section>
    
-          <img 
-          data-src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021ItalianGPManuals/Sunday/USA2021_F1_Winners_Losers.jpg.transform/9col/image.jpg" 
-          alt="USA2021_F1_Winners_Losers.jpg" 
-          class="lazy loaded" 
-          src="https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021ItalianGPManuals/Sunday/USA2021_F1_Winners_Losers.jpg.transform/9col/image.jpg" 
-          data-was-processed="true"/>          
+        <ResponsiveImage 
+            default="https://dummyimage.com/500x350/ced4da/6c757d"
+            tablet="https://dummyimage.com/300x350/ced4da/6c757d"
+            mobile="https://dummyimage.com/200x250/ced4da/6c757d"
+        />         
           
           <ButtonGroup>
             <Tooltip reverse data-title="Get the latest news 😄">
-              <IconButton icon="github" href="/latest">Read More</IconButton>
+              <Button href="/latest">Read More</Button>
             </Tooltip>
           </ButtonGroup>
         </Section>

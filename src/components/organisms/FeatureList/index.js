@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import {useTranslation} from "react-i18next";
 
 import {
-  Feature, Link, Heading, Paragraph,
+  Feature, Link, Heading, Paragraph, ResponsiveImage
 } from '../../index'
 
 const Grid = styled.div`
@@ -30,80 +31,86 @@ const Description = styled(Paragraph)`
 
 const StyledFeature = styled(Feature)`
   margin: 1rem;
+  span {
+    display: block;
+  }
   @media screen and (max-width: 640px) {
     margin: 0;
   }
 `
+const RImage = () => {
+  return (<ResponsiveImage
+    default="https://dummyimage.com/400x250/ced4da/6c757d"
+    tablet="https://dummyimage.com/300x250/ced4da/6c757d"
+    mobile="https://dummyimage.com/500x250/ced4da/6c757d"
+  />)
+}
 
-const FeatureList = ({ ...props }) => (
+
+const FeatureList = ({ ...props }) => {
+  const { t } = useTranslation();
+  return (
+  
   <div {...props}>
-    <StyledHeading>Basic stack</StyledHeading>
+    <StyledHeading>{t("topStories")}</StyledHeading>
     <Description>
-      It includes everything necessary to build a typical web app with focus on productivity and developer experience.
+      Lando Norris got his frights in well before Halloween as the McLaren driver said he was “so scared” at the beginning of the United States Grand Prix while battling his team mate Daniel Ricciardo and Ferrari’s Carlos Sainz.
       <br />
-      <Link href="https://github.com/diegohaz/arc/wiki/Workflow">Learn more about the recommended workflow</Link>
+      <Link href="/latest">Read More</Link>
     </Description>
     <Grid>
       <StyledFeature
-        icon="react"
         link="https://facebook.github.io/react"
-        title="React"
-        code="<MyComponent attr='value' />"
+        title="Vettel relishes battle with Russell at COTA as he fights his way up from P18 to the points"
       >
-        The Facebook&apos;s JavaScript library for building user interfaces using components.
+        <RImage />
+        <span>Vettel relishes battle with Russell at COTA as he fights his way up from P18 to the points</span>
       </StyledFeature>
       <StyledFeature
-        icon="react-router"
         link="https://github.com/ReactTraining/react-router"
-        title="React Router"
-        code="<Route path='/sample-page' />"
+        title="PALMER: Why Verstappen’s Austin win was such a seminal race for Red Bull's title contender"
       >
-        The most popular declarative routing library for React and React Native.
+        <RImage />
+        <span>PALMER: Why Verstappen’s Austin win was such a seminal race for Red Bull's title contender</span>
       </StyledFeature>
       <StyledFeature
-        icon="webpack"
         link="https://webpack.github.io/"
-        title="Webpack"
-        code="npm run build"
+        title="Jack Aitken to drive for Williams in Abu Dhabi FP1 – four months after horror Spa crash"
       >
-        The awesome module bundler with
-        {' '}
-        <Link href="https://webpack.github.io/docs/hot-module-replacement.html">Hot Module Replacement</Link>
-        {' '}
-enabled.
+        <RImage />
+        <span>Jack Aitken to drive for Williams in Abu Dhabi FP1 – four months after horror Spa crash
+          enabled.</span>
       </StyledFeature>
       <StyledFeature
-        icon="jest"
         link="https://facebook.github.io/jest"
-        title="Jest"
-        code="npm run test"
+        title="Norris explains 'scary' start in Austin as he battled with Ricciardo and Ferrari pair on Lap 1"
       >
-        The great testing framework used by Facebook to test all their Javascript code.
+        <RImage />
+        <span>Norris explains 'scary' start in Austin as he battled with Ricciardo and Ferrari pair on Lap 1</span>
       </StyledFeature>
     </Grid>
-    <StyledHeading>Optional features</StyledHeading>
+    <StyledHeading>More News</StyledHeading>
     <Description>
-      Features separated into another branches so you can use them only if you need to.
+      <span>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      </span>
     </Description>
     <Grid>
       <StyledFeature
-        icon="redux"
-        link="https://github.com/diegohaz/arc/tree/redux"
-        title="Redux"
-        code="git clone -b redux https://github.com/diegohaz/arc my-app"
+        link="https://facebook.github.io/jest"
+        title="Norris explains 'scary' start in Austin as he battled with Ricciardo and Ferrari pair on Lap 1"
       >
-        The predictable state container for JavaScript apps.
+        <RImage />
+        <span>Norris explains 'scary' start in Austin as he battled with Ricciardo and Ferrari pair on Lap 1</span>
       </StyledFeature>
       <StyledFeature
-        icon="dist"
-        link="https://github.com/diegohaz/arc/tree/redux-ssr"
-        title="Server Side Rendering"
-        code="git clone -b redux-ssr https://github.com/diegohaz/arc my-app"
+        link="https://facebook.github.io/jest"
+        title="Norris explains 'scary' start in Austin as he battled with Ricciardo and Ferrari pair on Lap 1"
       >
-        Write once and run on both server and client.
+        <RImage />
+        <span>Norris explains 'scary' start in Austin as he battled with Ricciardo and Ferrari pair on Lap 1</span>
       </StyledFeature>
     </Grid>
   </div>
-)
+)}
 
 export default FeatureList
