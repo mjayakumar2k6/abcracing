@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom"
-import styled, { css } from 'styled-components'
-import { font, palette } from 'styled-theme'
 import i18n from '../../i18n';
 
 const changeLanguage = (lng, e) => {

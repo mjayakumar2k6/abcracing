@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { size } from 'styled-theme'
 
-import i18n from '../../i18n';
 
 import { IconLink, PrimaryNavigation, Block, Lang } from '../../index'
 
@@ -24,10 +23,6 @@ const InnerWrapper = styled.div`
     margin-left: 1rem;
   }
 `
-
-const changeLanguage = (lng) => {
-  i18n.changeLanguage(lng);
-}
 
 const Header = (props) => {
   return (

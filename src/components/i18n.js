@@ -13,7 +13,8 @@ i18n.use(LanguageDetector).init({
         drivers: "Drivers",
         teams : "Teams",
         gaming: "Gaming",
-        liveTiming: "Live Timing"
+        liveTiming: "Live Timing",
+        topStories: "Top Stories"
       }
     },
     de: {
@@ -25,7 +26,8 @@ i18n.use(LanguageDetector).init({
         drivers: "Fährt",
         teams : "Mannschaften",
         gaming: "Spiele",
-        liveTiming: "Live-Timing"
+        liveTiming: "Live-Timing",
+        topStories: "Top-Geschichten"
       }
     }
   },
